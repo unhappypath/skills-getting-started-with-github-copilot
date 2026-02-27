@@ -48,3 +48,18 @@ The application uses a simple data model with meaningful identifiers:
    - Grade level
 
 All data is stored in memory, which means data will be reset when the server restarts.
+
+## Tests
+
+A suite of backend API tests lives in the `tests/` directory at the repository root.  The
+suite exercises the FastAPI endpoints using the [`TestClient`][tc] and follows the
+Arrange–Act–Assert (AAA) pattern.
+
+To run the tests:
+
+```bash
+pip install -r ../requirements.txt  # ensure pytest and dependencies are installed
+pytest
+```
+
+[tc]: https://fastapi.tiangolo.com/advanced/testing/#the-testclient
